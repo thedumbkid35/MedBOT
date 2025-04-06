@@ -1,0 +1,25 @@
+.bmi-result-container {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background: #f9f9f9;
+    margin-top: 1rem;
+  }
+  
+  .nutrition-section {
+    margin-top: 1.5rem;
+  }
+  
+  .nutrition-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .nutrition-section li {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 0.8rem;
+    margin-bottom: 0.75rem;
+    border-radius: 8px;
+  }
+  

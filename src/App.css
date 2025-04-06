@@ -1,38 +1,145 @@
-.App {
-  text-align: center;
+:root {
+  --color-dark: #3E362E;
+  --color-brown: #865D36;
+  --color-clay: #f5eee6;
+  --color-tan: #A69080;
+  --color-white: #ffffff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background: linear-gradient(135deg, #f9f6f0, #e6d7c3);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.app-content {
+  flex: 1;
+  padding-bottom: 60px;
 }
 
-@keyframes App-logo-spin {
+/* Footer Styling */
+footer.footer {
+  position: sticky;
+  bottom: 0;
+  background-color: var(--color-brown);
+  color: var(--color-white);
+  text-align: center;
+  padding: 12px 10px;
+  font-size: 16px;
+  animation: fadeIn 0.5s ease-in-out;
+  z-index: 100;
+}
+
+/* Animations */
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button styles */
+button {
+  background-color: var(--color-brown);
+  color: var(--color-white);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--color-dark);
+  transform: translateY(-2px);
+}
+
+/* Inputs */
+input, select, textarea {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-tan);
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+/* Responsive Navbar */
+.navbar {
+  background-color: #ac8968;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.navbar .menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.navbar a:hover{
+  background-color: #865D36;
+}
+
+/* Hamburger menu toggle */
+@media (max-width: 768px) {
+  .navbar .menu-icon {
+    display: block;
+  }
+
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: var(--color-brown);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .navbar .nav-links.active {
+    display: flex;
+  }
+
+  .navbar a {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+}
+
+/* Responsive footer text size */
+@media (max-width: 600px) {
+  footer.footer {
+    font-size: 14px;
+    padding: 10px;
   }
 }

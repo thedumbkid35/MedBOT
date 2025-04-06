@@ -21,7 +21,9 @@ const Navbar = () => {
         <li><NavLink to="/contact">Contact</NavLink></li>
         <li><NavLink to="/about">About Us</NavLink></li>
         <li><NavLink to="/profile">Profile</NavLink></li>
-        <li><button className="logout-btn" onClick={handleLogout}>Logout</button></li>
+        <li>
+          <button className="logout-btn" onClick={handleLogout}>Logout</button>
+        </li>
       </ul>
     </nav>
   );

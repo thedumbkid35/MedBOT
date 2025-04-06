@@ -1,54 +1,108 @@
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
 .remedy-container {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 25px;
-    background-color: #fdfdfd;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  }
-  
-  .remedy-container h2 {
-    text-align: center;
-    color: #0077cc;
-    margin-bottom: 20px;
-  }
-  
-  .input-box {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 25px;
-    justify-content: center;
-  }
-  
-  .input-box input {
-    padding: 10px;
-    width: 60%;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-  }
-  
-  .input-box button {
-    padding: 10px 15px;
-    background-color: #0077cc;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  
-  .input-box button:hover {
-    background-color: #005fa3;
-  }
-  
-  .results-box {
-    margin-top: 20px;
-  }
-  
-  .remedy-card {
-    background-color: #eaf6ff;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  }
-  
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #f4f1ec;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(62, 54, 46, 0.1);
+  animation: slideFadeIn 0.8s ease-out;
+}
+
+.remedy-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #865D36;
+}
+
+.input-box {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+/* Style for input */
+.input-box input {
+  width: 60%;
+  padding: 12px 14px;
+  font-size: 16px;
+  border: 2px solid #AC8968;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.input-box input:focus {
+  border-color: #865D36;
+  box-shadow: 0 0 5px rgba(134, 93, 54, 0.3);
+}
+
+/* Style for dropdown (select) */
+.input-box select {
+  width: 60%;
+  padding: 12px 14px;
+  font-size: 16px;
+  border: 2px solid #AC8968;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #3E362E;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-box select:focus {
+  border-color: #865D36;
+  box-shadow: 0 0 5px rgba(134, 93, 54, 0.3);
+}
+
+/* Style for button */
+.input-box button {
+  background-color: #865D36;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.input-box button:hover {
+  background-color: #A69080;
+  transform: scale(1.05);
+}
+
+.results-box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.remedy-card {
+  background-color: #fff;
+  border-left: 5px solid #AC8968;
+  padding: 16px 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(134, 93, 54, 0.1);
+  font-size: 17px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.remedy-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(134, 93, 54, 0.15);
+}

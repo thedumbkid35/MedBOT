@@ -1,45 +1,100 @@
-.login-container {
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f0eae2, #e1d5c9);
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #e6f0ff;
+    overflow: hidden;
   }
   
-  .login-form {
-    background: #fff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 320px;
+  .login-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
   }
   
-  .login-form h2 {
+  .logo-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #3E362E;
+    margin-bottom: 30px;
+    animation: slideInTop 1s ease-in-out;
+  }
+  
+  .login-container {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  .login-container h2 {
     text-align: center;
-    color: #0077cc;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #3E362E;
   }
   
-  .login-form input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 14px;
+  .login-container input {
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 2px solid #AC8968;
+    transition: all 0.3s ease;
   }
   
-  .login-form button {
-    padding: 10px;
-    background: #0077cc;
+  .login-container input:focus {
+    outline: none;
+    border-color: #865D36;
+    box-shadow: 0 0 8px rgba(134, 93, 54, 0.4);
+  }
+  
+  .login-container button {
+    margin-top: 15px;
+    background-color: #865D36;
     color: white;
+    padding: 12px;
     border: none;
-    border-radius: 8px;
-    font-size: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1rem;
     cursor: pointer;
+    transition: all 0.3s ease;
   }
   
-  .login-form button:hover {
-    background: #005fa3;
+  .login-container button:hover {
+    background-color: #3E362E;
+    transform: scale(1.03);
+  }
+  
+  /* Animations */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInTop {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   

@@ -1,21 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #f2eee6, #e7d8c9);
+  font-family: 'Poppins', sans-serif;
+  color: #3E362E;
+  min-height: 100vh;
+}
+
+/* Animation for the container */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .home-container {
-    max-width: 700px;
-    margin: 60px auto;
-    text-align: center;
-    background: #f2f9ff;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  }
-  
-  .home-container h1 {
-    color: #0077cc;
-    margin-bottom: 20px;
-  }
-  
-  .home-container p {
-    font-size: 17px;
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
+  max-width: 900px;
+  margin: 100px auto;
+  padding: 50px 40px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+  border-radius: 25px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeSlideIn 1s ease forwards;
+  text-align: center;
+}
+
+/* Gradient heading */
+.home-container h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  background: linear-gradient(90deg, #865D36, #A69080);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 30px;
+}
+
+.home-container h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  background:rgb(93, 45, 45);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 30px;
+}
+
+
+/* Paragraph styles */
+.home-container p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin: 15px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.home-container p:hover {
+  transform: scale(1.02);
+  color: #5e4a3b;
+  opacity: 0.95;
+}
+
+/* Optional subtle border to make container pop */
+.home-container::before {
+  content: '';
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  left: 5%;
+  top: 5%;
+  z-index: -1;
+  border-radius: 25px;
+  background: linear-gradient(145deg, #c2b2a2, #ffffff);
+  filter: blur(30px);
+  opacity: 0.2;
+}

@@ -1,45 +1,112 @@
-.profile-container {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #f5faff;
+/* Make sure this file is imported in your component */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(to bottom right, #f5eee6, #e0d4c0);
+    overflow-x: hidden;
+  }
+  html, body, #root {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto; /* 💡 enables vertical scrolling */
   }
   
-  .profile-form {
-    background: #fff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 400px;
+  
+  .profile-container {
+    max-width: 600px;
+    margin: 100px auto 160px; /* 160px bottom margin to avoid footer overlap */
+    background-color: #f8f1e8;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    color: #3E362E;
+    transition: all 0.3s ease-in-out;
+    animation: fadeIn 0.6s ease-in;
+  }
+  
+  .profile-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #865D36;
+    position: relative;
+  }
+  
+  .profile-container h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #AC8968;
+    margin: 10px auto;
+    border-radius: 5px;
+  }
+  
+  form {
     display: flex;
     flex-direction: column;
-    gap: 12px;
   }
   
-  .profile-form h2 {
-    text-align: center;
-    color: #0077cc;
+  label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #5c4430;
   }
   
-  .profile-form input {
+  input,
+  select {
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 14px;
+    border-radius: 10px;
+    border: 1px solid #A69080;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+    font-size: 16px;
+    background-color: #fffaf5;
   }
   
-  .profile-form button {
-    padding: 10px;
-    background: #0077cc;
-    color: white;
+  input:focus,
+  select:focus {
+    border-color: #865D36;
+    box-shadow: 0 0 8px rgba(134, 93, 54, 0.3);
+  }
+  
+  button {
+    margin-top: 30px;
+    padding: 12px 20px;
+    background-color: #865D36;
+    color: #fff;
     border: none;
-    border-radius: 8px;
-    font-size: 15px;
+    border-radius: 12px;
+    font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
   }
   
-  .profile-form button:hover {
-    background: #005fa3;
+  button:hover {
+    background-color: #A69080;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 700px) {
+    .profile-container {
+      margin: 80px 20px 180px;
+      padding: 30px 20px;
+    }
   }
   
